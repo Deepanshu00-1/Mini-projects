@@ -1,0 +1,319 @@
+/* body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: 30px;
+    background: darkcyan;
+    width: 100%;
+    padding: 0 20px;
+    color: white;
+    opacity: 0.2; /* Adjust the opacity as desired 
+}
+
+.content {
+    margin-top: 50px; /* Set this to the height of your navbar 
+    background: #ddd;
+    height: calc(100vh - 50px);
+    overflow: auto;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.article {
+    height: 200px;
+    width: 100%;
+    background: #ccc;
+    margin: 12px 0;
+}*/
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height: 100%;
+    background-color: rgb(37, 32, 32);
+    background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(./images/b2.jpg);
+    background-size:contain;
+    background-position:initial;
+    /* backdrop-filter: blur(5px); */
+    /* overflow: hidden; */
+    background: url('./images/bgVideo.mp4');
+}
+.main{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.bgVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    /* width: 100%;
+    height: 100vh; */
+}
+@media (min-aspect-ratio:16/9){
+    .bgVideo{
+        width: 100%;
+        height: auto;
+        background-color: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60));
+    }
+}
+@media (max-aspect-ratio:16/9){
+    .bgVideo{
+        width: auto;
+        height: 100%;
+        background-color: linear-gradient(rgba(0.0.0.0.60), rgba(0.0.0.0.60));
+    }
+}
+.main h1{
+    margin-top: 50vh;
+    /* margin-left: 10vw; */
+    font-size: 5vw;
+    background-color: azure;
+}
+
+/* .main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(37, 32, 32);
+    background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(./images/b2.jpg);
+    background-size:cover;
+    background-position: center;
+} */
+header{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(27, 25, 25);
+    position: fixed;
+    opacity: 1;
+    display: flex;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.logo{
+    width: 15vw;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.logo:hover{
+    cursor: pointer;
+}
+.logo img{
+    width: 17vw;
+    height: 90%;
+    /* padding: 2px; */
+}
+.nav{
+    width: 60vw;
+    height: 100%;
+    /* background-color: rgb(214, 147, 59); */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgb(255 255 255/0.5);
+}
+.nav h4{
+    border: 1px solid transparent;
+    padding: 15px;
+}
+.nav h4:hover{
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid transparent;
+    /* background-color: rgb(255 255 255/0.5); */
+    
+}
+
+.signin{
+    width: 25vw;
+    height: 100%;
+    /* background-color: #0D0B14; */
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.signin h4{
+    font-size: larger;
+    color:rgb(255 255 255/0.5);
+    border: 1px solid transparent;
+    padding: 15px;
+}
+.signin h4:hover{
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.signinButton {
+    all: unset;
+    width: 80px;
+    height: 20px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* white-space: nowrap; */
+    /* user-select: none; */
+    /* -webkit-user-select: none; */
+    /* touch-action: manipulation; */
+}
+  
+.signinButton::after,
+.signinButton::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+  
+.signinButton::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #2B90C0;
+    border-radius: 10px;
+}
+  
+.signinButton::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 30px;
+    background: #55555515;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+  
+.signinButton:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+}
+  
+.signinButton:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+  
+.signinButton:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+.heroSection{
+    width: 100%;
+    height: 600px;
+    background-color: aquamarine;
+    overflow: auto;
+    margin-top: -10px;
+}
+.aboutSection{
+    /* margin-top: -230px; */
+    width: 100%;
+    height: 600px; 
+    background-color: beige;
+}
+.content{
+    display: flex;
+    margin-top: -20px;
+    margin-right: 50px;
+    align-items: center;
+    /* width: 350px;
+    height: 120px; */
+    /* background-color: lime; */
+    padding: 30px;
+    border-radius: 10px;
+    height: 300px;
+    /* padding-top: -10vh; */
+    
+    /* backdrop-filter: blur(3px); */
+}
+.content h2{
+    font-size: 3vh;
+    background-image: linear-gradient(rgb(27, 25, 25), #2B90C0, #fff);
+    padding: 15px;
+    width: 9vw;
+    border-radius: 10px 5px 10px 5px;
+}
+.content h2:hover{
+    cursor:pointer;
+    background-image: linear-gradient(#2B90C0,#fff,rgb(27, 25, 25));
+}
+.start{
+    width: 120px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 10px 5px 10px 5px;
+    border: none;
+    background-image: linear-gradient(white, #2B90C0, rgb(27, 25, 25));
+    font-size: 2.5vh;
+    font: bolder;
+}
+.start:hover{
+    cursor:pointer;
+    background-image: linear-gradient(#2B90C0,#fff,rgb(27, 25, 25));
+}
+.verLine{
+  width: 2px;
+  height: 120px;
+  background-color: #fff;
+  margin-right: 20px;
+  /* margin-left: 60px;  */
+}
+.texticon{
+    display: flex;
+    z-index: -1;
+    margin-top: 30px;
+    margin-right: 200px;
+    margin-top: 80px;
+    font-size: 2.5vw;
+    color: #fff;
+}
+.texticon i{
+    margin-top: 0;
+    font-size: 6vw;
+    margin-left: 1vw;
+}
+.section1{
+    width: 50%;
+    height: 100%;
+    background-color: aquamarine;
+    display: flex;
+}
+.section h1{
+    display: block;
+    font-size: 3vh;
+    margin-top: 300px;
+    z-index:1;
+}

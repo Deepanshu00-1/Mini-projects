@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            height: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            font-family: Helvetica;
+            font-size: 30px;
+            background: darkcyan;
+            width: 100%;
+            padding: 0 20px;
+            color: white;
+            opacity: 0.1; /* Adjust the opacity as desired */
+        }
+
+        .content {
+            margin-top: 50px; /* Set this to the height of your navbar */
+            background: #ddd;
+            height: calc(100vh - 50px);
+            overflow: auto;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        .article {
+            height: 600px;
+            width: 100%;
+            background: #ccc;
+            margin: 12px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar"></div>
+    <div class="content">
+        <div class="article">Article 1</div>
+        <div class="article">Article 2</div>
+        <!-- Add more content here -->
+    </div>
+</body>
+</html>
